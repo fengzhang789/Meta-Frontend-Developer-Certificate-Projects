@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: #f2eaf4;
+}
+
+
+/* PERFECT FOURTH TYPESCALE */
+h1, h2, h3, h4, h5 {
+font-family: 'Poppins';
+font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+body {
+    margin: 2% 5%;
+    font-family: 'Poppins';
+    font-weight: 400;
+    background-color: #150a17;
+}
+
+.accent {
+    background: -webkit-linear-gradient(#CC8BDA, #c33be0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* HEADER STYLES */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    width: 20%;
+    max-width: 100%;
+    transition: 0.3s;
+    margin-bottom: 1vh;
+}
+
+header > img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+/* NAVBAR STYLES */
+nav {
+    width: auto;
+    padding: 2vh 0;
+    border-bottom: 2px solid #d4cad5;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.nav-item {
+    margin: 0 2vw;
+    opacity: 1;
+    color: #f2eaf4;
+    transition: 0.3s;
+    font-size: 1.333rem;
+}
+
+.nav-item:hover {
+    color: #c33be0;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+ul:hover li:not(:hover)  {
+    opacity: 0.2;
+}
+
+/* MAIN CONTENT STYLES */
+main {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:    
+        "promo promo promo"
+        "content1 content2 content3";
+    column-gap: 2vw;
+}
+
+#promo {
+    grid-area: promo;
+    margin: 4vh 0;
+    text-align: center;
+}
+
+main article:not(:first-child) {
+    background: #290f2e;
+    border-radius: 15px;
+    padding: 3% 7%;
+    height: auto;
+    transition: 0.5s;
+}
+
+main article:not(:first-child):hover {
+    transform: translateY(-5%);
+}
+
+main img {
+    object-fit: cover;
+    width: 100%;
+}
+
+#content1 {
+    grid-area: content1;
+}
+
+#content2 { 
+    grid-area: content2;
+}
+
+#content3 {
+    grid-area: content3;
+}
+
+
+/* FOOTER STYLES */
+footer {
+    display: flex;
+    width: 100%;
+    margin-top: 3vh;
+    justify-content: space-between;
+}
+
+footer div {
+    flex-basis: 50%;
+    width: 50%;
+}
+
+footer div:last-child {
+    text-align: right;
+}
+
+footer img {
+    height: 20vh;
+    max-width: 100%;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 12px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:    
+            "promo"
+            "content1"
+            "content2"
+            "content3";
+        row-gap: 5vh;
+    }
+    
+    
+    #logo {
+        height: 10vh;
+        width: auto;
+    }
+
+    footer img {
+        height: 10vh;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 12px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:    
+            "promo"
+            "content1"
+            "content2"
+            "content3";
+        row-gap: 5vh;
+    }
+    
+    
+    #logo {
+        height: 10vh;
+        width: auto;
+    }
+
+    footer img {
+        height: 10vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:    
+            "promo"
+            "content1"
+            "content2"
+            "content3";
+        row-gap: 5vh;
+    }
+    
+    
+    #logo {
+        height: 10vh;
+        width: auto;
+    }
+
+    footer img {
+        height: 10vh;
+    }
+}
